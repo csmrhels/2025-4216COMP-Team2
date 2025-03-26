@@ -22,7 +22,7 @@ ax2.set_ylabel("CO2 Emissions (Tons/Capita)", color="tab:blue")
 ax2.plot(df_global["Year"], df_global["CO2 Emissions (Tons/Capita)"], color="tab:blue", marker="s", linestyle="dashed", label="CO2 Emissions")
 ax2.tick_params(axis="y", labelcolor="tab:blue")
 
-plt.title("Correlation Between CO2 Emissions and Temperature Over Time")
+plt.title("Correlation Between CO2 Emissions and Temperature Over Timea")
 fig.tight_layout()
 plt.grid()
 
