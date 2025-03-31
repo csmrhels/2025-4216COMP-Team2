@@ -1,3 +1,4 @@
+#Question: What countries have the highest average CO2 emissions per person.
 import matplotlib.pyplot as plt
 import pandas as pd
 import csv
