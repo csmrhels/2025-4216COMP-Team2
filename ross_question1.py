@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-file_path = r"M:\UniServerZ\www\matplotlib\4216Team2\climate_change_dataset_rounded.csv"
+file_path = "climate_change_dataset_rounded.csv"
 df = pd.read_csv(file_path)
 
 df_global = df.groupby("Year").agg({
