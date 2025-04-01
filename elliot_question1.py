@@ -1,9 +1,21 @@
+#Question: What country has the highest CO2 emissions per person?
 import matplotlib.pyplot as plt
 import pandas as pd
 import csv
 
 path = "climate_change_dataset_rounded.csv"
-df = pd.read_csv(path)
+df = pd.read_csv(path, dtype= {
+    "Country": "category",
+    "Year": "int16",
+    "Avg Temperature (°C)": "float32",
+    "CO2_Emissions": "float32",
+    "Sea Level Rise (mm)": "float32",
+    "Rainfall (mm)": "float32",
+    "Population": "int32",
+    "Renewable Energy (%)": "float32",
+    "Extreme Weather Event": "int8",
+    "Forest Area (%)": "float32",
+})
 
 #Group by the country to work out average for each one and find mean.
 averageCo2Cont = df.groupby("Country")["CO2 Emissions (Tons/Capita)"].mean()
