@@ -1,9 +1,21 @@
+#Question: What country has the highest CO2 emissions per person?
 import matplotlib.pyplot as plt
 import pandas as pd
 import csv
 
 path = "climate_change_dataset_rounded.csv"
-df = pd.read_csv(path)
+df = pd.read_csv(path, dtype= {
+    "Country": "category",
+    "Year": "int16",
+    "Avg Temperature (°C)": "float32",
+    "CO2_Emissions": "float32",
+    "Sea Level Rise (mm)": "float32",
+    "Rainfall (mm)": "float32",
+    "Population": "int32",
+    "Renewable Energy (%)": "float32",
+    "Extreme Weather Event": "int8",
+    "Forest Area (%)": "float32",
+}) #add for optimisation
 
 #Group by the country to work out average for each one and find mean.
 averageCo2Cont = df.groupby("Country")["CO2 Emissions (Tons/Capita)"].mean()
@@ -19,11 +31,11 @@ bars = plt.barh(topCont.index, topCont.values, color='grey')
 
 #Sort the values out so they dont highlight the incorrect values.
 averageCo2Cont = averageCo2Cont.sort_values()
-highest_bar_index = list(averageCo2Cont.index).index(averageCo2Cont.idxmax())
-lowest_bar_index = list(averageCo2Cont.index).index(averageCo2Cont.idxmin())
+highIndex = list(averageCo2Cont.index).index(averageCo2Cont.idxmax())
+lowIndex = list(averageCo2Cont.index).index(averageCo2Cont.idxmin())
 
-bars[highest_bar_index].set_color('green')  # Highlight lowest due to flipped
-bars[lowest_bar_index].set_color('red')  # Highlight highest due to flipped
+bars[highIndex].set_color('green')  # Highlight lowest due to flipped
+bars[lowIndex].set_color('red')  # Highlight highest due to flipped
 
 
 
