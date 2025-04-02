@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
-file_path = r"M:4216-cw\4216Team2\climate_change_dataset_rounded.csv"
-df = pd.read_csv(file_path)
+file_path = r"climate_change_dataset_rounded.csv"
+df = pd.read_csv(file_path, encoding="latin1")
 
 
 canada_data = df[df["Country"] == "Canada"]
