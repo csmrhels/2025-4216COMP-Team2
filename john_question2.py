@@ -15,7 +15,7 @@ with open('climate_change_dataset_rounded.csv','r') as csvfile:
         x.append(row[0]) #inserts the countries
         y.append(float(row[7])) #inserts the renewable energy %
         
-  
+#creates the graph  
 plt.bar(x, y, color = 'r', width = 0.5, label = "renewable energy %") 
 
 plt.xlabel('countires') 
