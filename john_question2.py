@@ -8,12 +8,14 @@ y = []
 with open('climate_change_dataset_rounded.csv','r') as csvfile:
     plots = csv.reader(csvfile)
 
-    csv.reader= csv.reader(csvfile) 
-    next(csv.reader) #skips the headings
+    #skips header row
+    next(plots) 
 
     for row in plots:
-        x.append(row[0]) #inserts the countries
-        y.append(float(row[7])) #inserts the renewable energy %
+        #inserts the countries
+        x.append(row[0]) 
+        #inserts the renewable energy %
+        y.append(float(row[7])) 
         
 #creates the graph  
 plt.bar(x, y, color = 'r', width = 0.5, label = "renewable energy %") 
