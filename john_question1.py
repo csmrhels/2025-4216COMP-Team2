@@ -11,13 +11,17 @@ file = {
 with open('climate_change_dataset_rounded.csv','r') as csvfile:
     plots = csv.reader(csvfile)
 
-    csv.reader= csv.reader(csvfile) 
-    next(csv.reader) #skips the headings
+    #skips header row
+    next(plots) 
 
     for int, row in enumerate (plots):
-        year = (row[1]) #inserts the years
-        sea_level = (float(row[4])) #inserts the sea level rise
 
+        #inserts the years
+        year = (row[1])
+        #inserts the sea level rise
+        sea_level = (float(row[4])) 
+
+        #gets the information about each county
         if 296 <= int <= 317:
             file['UK']['x'].append(year)
             file['UK']['y'].append(sea_level)
@@ -31,6 +35,7 @@ with open('climate_change_dataset_rounded.csv','r') as csvfile:
             file['Australia']['x'].append(year)
             file['Australia']['y'].append(sea_level)
 
+#plotting the graph
 fig, axs = plt.subplots(2,2, figsize=(10, 8))
 plt.tight_layout()
 
