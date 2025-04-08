@@ -33,13 +33,3 @@ print(f"The hottest year in the world is {hottest_year['Year']} with an average 
 #The coldest year in the world
 coldest_year = data.loc[data['Avg Temperature (°C)'].idxmin()]
 print(f"The coldest year in the world is {coldest_year['Year']} with an average temperature of {coldest_year['Avg Temperature (°C)']}°C.")
-#Comparing the average temperature of the hottest and coldest year
-plt.figure(figsize=(10, 6))
-plt.bar(['Hottest Year', 'Coldest Year'], [hottest_year['Avg Temperature (°C)'], coldest_year['Avg Temperature (°C)']], color=['red', 'blue'])
-plt.title('Average Temperature Comparison')
-plt.xlabel('Year')
-plt.ylabel('Avg Temperature (°C)')
-plt.grid()
-plt.tight_layout()
-plt.savefig('avg_temp_comparison.png')
-plt.show()
