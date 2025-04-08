@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import csv
 # Climate Change Data Analysis
-with open('climate_change_dataset_rounded.csv','r') as f:
+with open('climate_change_dataset_rounded.csv','r', encoding="latin1") as f:
     sv_reader=csv.reader(f)
     header_row = next(sv_reader)
     print(header_row)
