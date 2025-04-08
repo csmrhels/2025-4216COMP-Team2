@@ -9,7 +9,7 @@ with open('climate_change_dataset_rounded.csv','r') as f:
     data = pd.read_csv("climate_change_dataset_rounded.csv", dtype= {
     "Country": "category",
     "Year": "int16",
-    "Avg Temperature (°C)": "float32",
+    "Avg Temperature (C)": "float32",
     "CO2_Emissions": "float32",
     "Sea Level Rise (mm)": "float32",
     "Rainfall (mm)": "float32",

@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 data = pd.read_csv("climate_change_dataset_rounded.csv", encoding="latin1", dtype= {
     "Country": "category",
     "Year": "int16",
-    "Avg Temperature (°C)": "float32",
+    "Avg Temperature (C)": "float32",
     "CO2_Emissions": "float32",
     "Sea Level Rise (mm)": "float32",
     "Rainfall (mm)": "float32",
@@ -27,9 +27,9 @@ fig, ax1 = plt.subplots(figsize=(10, 5))
 #plotting the average temperature on the primary y axis of the line graph
 ax1.set_xlabel("Year")
 
-ax1.set_ylabel("Avg Temperature (°C)", color="red")
+ax1.set_ylabel("Avg Temperature (C)", color="red")
 
-ax1.plot(data_country["Year"], data_country["Avg Temperature (°C)"], marker="o", color="red", label="Avg Temp")
+ax1.plot(data_country["Year"], data_country["Avg Temperature (C)"], marker="o", color="red", label="Avg Temp")
 
 ax1.tick_params(axis="y", labelcolor="red")
 

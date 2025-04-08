@@ -1,4 +1,4 @@
-Country,Year,Avg Temperature (°C),CO2 Emissions (Tons/Capita),Sea Level Rise (mm),Rainfall (mm),Population,Renewable Energy (%),Extreme Weather Events,Forest Area (%)
+Country,Year,Avg Temperature (C),CO2 Emissions (Tons/Capita),Sea Level Rise (mm),Rainfall (mm),Population,Renewable Energy (%),Extreme Weather Events,Forest Area (%)
 Argentina,2000,16.9,3.9,4,2047,564877556,15.5,11,18.4
 Argentina,2001,21.98,12.6,3.18,2306.25,835770157,23.45,4.5,23.2
 Argentina,2002,20.95,15.1,2.1,1190.5,778623459,18.9,8.5,41

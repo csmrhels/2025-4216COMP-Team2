@@ -4,17 +4,17 @@ import pandas as pd
 file_path = r"climate_change_dataset_rounded.csv"
 df = pd.read_csv(file_path, encoding="latin1")
 
-# Group the data by 'Country' and calculate the mean of the 'Avg Temperature (°C)' for each country
-meanTempPerCountry = df.groupby("Country")[["Avg Temperature (°C)"]].mean().reset_index()
+# Group the data by 'Country' and calculate the mean of the 'Avg Temperature (C)' for each country
+meanTempPerCountry = df.groupby("Country")[["Avg Temperature (C)"]].mean().reset_index()
 
 # Sort the countries by their average temperature in ascending order
-meanTempPerCountry= meanTempPerCountry.sort_values(by="Avg Temperature (°C)", ascending=True)
+meanTempPerCountry= meanTempPerCountry.sort_values(by="Avg Temperature (C)", ascending=True)
 
 # Create the plot and define size of plot
 plt.figure(figsize=(12, 6))
  
 # Create a horizontal bar plot showing the average temperature by country
-plt.barh(meanTempPerCountry["Country"], meanTempPerCountry["Avg Temperature (°C)"], color="red")
+plt.barh(meanTempPerCountry["Country"], meanTempPerCountry["Avg Temperature (C)"], color="red")
 
 #Label axis
 plt.xlabel("Average Temperature (°C)")

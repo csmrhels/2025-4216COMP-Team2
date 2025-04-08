@@ -11,7 +11,7 @@ canada_data = df[df["Country"] == "Canada"]
 fig, ax1 = plt.subplots(figsize=(10, 5))
 
 # Plot the average temperature in Canada over the years
-plt.plot(canada_data["Year"], canada_data["Avg Temperature (°C)"], marker="o", linestyle="-", color="b", label="Avg Temperature")
+plt.plot(canada_data["Year"], canada_data["Avg Temperature (C)"], marker="o", linestyle="-", color="b", label="Avg Temperature")
 
 # Label axis
 plt.ylabel("Avg Temperature (°C)")
