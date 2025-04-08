@@ -35,7 +35,7 @@ ax2.bar([i + bar_width/2 for i in x], df_total["Population"],
 ax2.tick_params(axis="y", labelcolor="tab:blue")
 
 #creates graph title
-plt.title("Relationship Between Population and Total CO2 Emissions Over Time")
+plt.title("Relationship Between Population and Total CO2 Emissions")
 plt.grid(axis='y')
 
 plt.show()

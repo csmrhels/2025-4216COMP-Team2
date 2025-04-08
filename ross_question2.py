@@ -16,7 +16,7 @@ ax1.set_ylabel("Avg Temperature (C)", color="tab:blue")
 ax1.plot(yearly_avg["Year"], yearly_avg["Avg Temperature (C)"], color="tab:blue", label="Avg Temperature")
 ax1.tick_params(axis='y', labelcolor="tab:blue")
 
-#creates second y-acis and plots sea level rise
+#creates second y-axis and plots sea level rise
 ax2 = ax1.twinx()
 ax2.set_ylabel("Sea Level Rise (mm)", color="tab:green")
 ax2.plot(yearly_avg["Year"], yearly_avg["Sea Level Rise (mm)"], color="tab:green", label="Sea Level Rise")
