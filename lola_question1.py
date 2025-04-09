@@ -17,7 +17,7 @@ ax1.tick_params(axis="y", labelcolor="tab:blue")
 
 ax2 = ax1.twinx()
 ax2.plot(df_global["Year"], df_global["Rainfall (mm)"], color="tab:green", marker="s", linestyle="solid", label="Average Rainfall(mm)")
-ax2.set_ylabel("Average Sea Level(mm)", color="tab:green")
+ax2.set_ylabel("Average Rainfall (mm)", color="tab:green")
 ax2.tick_params(axis="y", labelcolor="tab:green")
 
 plt.title("The correlation between the sea level and rainfall over the years")
